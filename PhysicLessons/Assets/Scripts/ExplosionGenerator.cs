@@ -2,22 +2,19 @@ using UnityEngine;
 
 public class ExplosionGenerator : MonoBehaviour
 {
-    public float explosionForce = 1000f; // Сила взрыва
-    public float radius = 5f; // Радиус взрыва
-    public float explosionInterval = 3f; // Интервал между взрывами в секундах
-
-    private float nextExplosionTime = 0f; // Время следующего взрыва
+    public float explosionForce = 1000f; 
+    public float radius = 5f; 
+    public float explosionInterval = 3f; 
+    private float nextExplosionTime = 0f; 
 
     private void Update()
     {
-        // Проверяем, пришло ли время для следующего взрыва
         if (Time.time >= nextExplosionTime)
         {
             GenerateExplosion();
-            nextExplosionTime = Time.time + explosionInterval; // Устанавливаем время следующего взрыва
+            nextExplosionTime = Time.time + explosionInterval; 
         }
     }
-
     private void GenerateExplosion()
     {
         Rigidbody[] blocks = FindObjectsOfType<Rigidbody>();

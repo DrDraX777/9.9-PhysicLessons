@@ -10,7 +10,6 @@ public class ZeroGravitySphere : MonoBehaviour
             rb.useGravity = false;
         }
     }
-
     private void OnTriggerExit(Collider other)
     {
         Rigidbody rb = other.GetComponent<Rigidbody>();
